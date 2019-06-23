@@ -15,8 +15,8 @@ class LoaderState extends State<Loader> with SingleTickerProviderStateMixin {
   Animation<double> animationRadiusIn;
   Animation<double> animationRadiusOut;
 
-  final double initRadius = 30;
-  double radius = 10;
+  final double initRadius = 15;
+  double radius = 5;
 
   @override
   void initState() {
@@ -76,34 +76,69 @@ class LoaderState extends State<Loader> with SingleTickerProviderStateMixin {
           child: Stack(
             children: <Widget>[
               Dot(
-                radius: 30.0,
+                radius: initRadius,
                 color: Colors.grey,
               ),
               Transform.translate(
-                offset: Offset(radius * cos(pi), radius * sin(pi)),
+                offset: Offset(radius * cos(pi / 4), radius * sin(pi / 4)),
                 child: Dot(
-                  radius: 10.0,
+                  radius: 5.0,
+                  color: Colors.orange,
+                ),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(2 * pi / 4), radius * sin(2 * pi / 4)),
+                child: Dot(
+                  radius: 5.0,
+                  color: Colors.yellow,
+                ),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(3 * pi / 4), radius * sin(3 * pi / 4)),
+                child: Dot(
+                  radius: 5.0,
+                  color: Colors.green,
+                ),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(4 * pi / 4), radius * sin(4 * pi / 4)),
+                child: Dot(
+                  radius: 5.0,
+                  color: Colors.blue,
+                ),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(5 * pi / 4), radius * sin(5 * pi / 4)),
+                child: Dot(
+                  radius: 5.0,
+                  color: Colors.blueAccent,
+                ),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(6 * pi / 4), radius * sin(6 * pi / 4)),
+                child: Dot(
+                  radius: 5.0,
+                  color: Colors.purple,
+                ),
+              ),
+              Transform.translate(
+                offset: Offset(
+                    radius * cos((7 * pi) / 4), radius * sin((7 * pi) / 4)),
+                child: Dot(
+                  radius: 5.0,
                   color: Colors.red,
                 ),
               ),
               Transform.translate(
-                offset: Offset(radius * sin(pi), radius * cos(pi)),
+                offset: Offset(
+                    radius * cos((8 * pi) / 4), radius * sin((8 * pi) / 4)),
                 child: Dot(
-                  radius: 10.0,
-                  color: Colors.red,
-                ),
-              ),
-              Transform.translate(
-                offset: Offset(radius * sin(pi / 2), radius * cos(pi / 2)),
-                child: Dot(
-                  radius: 10.0,
-                  color: Colors.red,
-                ),
-              ),
-              Transform.translate(
-                offset: Offset(radius * cos(pi / 2), radius * sin(pi / 2)),
-                child: Dot(
-                  radius: 10.0,
+                  radius: 5.0,
                   color: Colors.red,
                 ),
               ),
